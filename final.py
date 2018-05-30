@@ -58,8 +58,8 @@ encoded_Y = encoder.transform(classes)
 # convert integers to dummy variables (i.e. one hot encoded)
 dummy_y = np_utils.to_categorical(encoded_Y)
 
-estimator = KerasClassifier(build_fn=baseline_model, epochs=500, batch_size=10, verbose=0)
-kfold = KFold(n_splits=7, shuffle=True, random_state=seed)
+estimator = KerasClassifier(build_fn=baseline_model, epochs=100, batch_size=10, verbose=0)
+kfold = KFold(n_splits=10, shuffle=True, random_state=seed)
 
 
 results = cross_val_score(estimator, attributes, dummy_y, cv=kfold)
