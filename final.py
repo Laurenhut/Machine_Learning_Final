@@ -2,7 +2,7 @@
 import numpy as np
 import pandas
 from keras.models import Sequential
-from keras.layers import Dense
+from keras.layers import Dense,Dropout
 from keras.wrappers.scikit_learn import KerasClassifier
 from keras.utils import np_utils
 from sklearn.model_selection import cross_val_score
@@ -27,8 +27,11 @@ def baseline_model():
     model = Sequential()
     model.add(Dense(10, input_dim=1023, activation='relu'))
     model.add(Dense(8, activation='relu'))
+    model.add(Dropout(0.3))
     model.add(Dense(5, activation='relu'))
+    model.add(Dropout(0.1))
     model.add(Dense(3, activation='relu'))
+
     model.add(Dense(37, activation='softmax'))
     model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
     return model
@@ -58,8 +61,8 @@ encoded_Y = encoder.transform(classes)
 # convert integers to dummy variables (i.e. one hot encoded)
 dummy_y = np_utils.to_categorical(encoded_Y)
 
-estimator = KerasClassifier(build_fn=baseline_model, epochs=100, batch_size=10, verbose=0)
-kfold = KFold(n_splits=10, shuffle=True, random_state=seed)
+estimator = KerasClassifier(build_fn=baseline_model, epochs=500, batch_size=10, verbose=0)
+kfold = KFold(n_splits=7, shuffle=True, random_state=seed)
 
 
 results = cross_val_score(estimator, attributes, dummy_y, cv=kfold)
