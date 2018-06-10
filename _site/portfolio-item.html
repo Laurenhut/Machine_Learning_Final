@@ -1,0 +1,138 @@
+<!-- inject:partials/header.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Aries Free HTML Template</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <!-- build:css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- endbuild -->
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/theme.css">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"> EECS 349 Final Project</a>
+            <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsDefault">
+                <ul class="navbar-custom navbar-nav ml-auto">
+
+                    <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="portfolio-item.html">Project Details</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+<!-- endinject -->
+
+<!-- Intro -->
+<div class="intro">
+<div class="intro-body">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-4">
+				<h1 class="brand-heading">Project Details</h1>
+				<!-- <p class="intro-text">
+					Buildings, Parks, Gardens
+				</p> -->
+				<a href="#single-project" class="btn btn-circle page-scroll">
+				<i class="fa fa-angle-double-down animated"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- Project Details Section -->
+<section id="single-project">
+<div class="container content-section text-center">
+	<div class="row justify-content-center" align="left">
+		<div align="left">
+
+            <p > <b>Title: Predicting someone's identity using eye tracking biometrics</b></p>
+
+            <p><b>Project Members: Lauren Hutson, Michael Tobia</b></p>
+
+            <p><b>Contact details: l.hutson@live.com, michaeltobia2019@u.northwestern.edu </b></p>
+
+            <p><b>Course: EECS 349 </b></p>
+
+            <p><b>Institution: Northwestern University </b></p>
+
+			<p>
+                Problem definition
+                Our task is to be able to predict who a person is based off of the movements of their
+                left and right eyes when tracking an object. This task is important for the field of
+                biometrics, which correlates to the fields of security and identification.
+                It also has uses in the medical field for identification of diseases or symptoms of strokes.
+                To accomplish our goal we employed a variety of different learners which included a multiclassification neural network using dropout and data normilization.
+                Pruned decision trees, random forests, and SVM's.
+
+            </p>
+            <p>
+                Key Results
+                Accross the different learners we used ten fold cross validation to train/ test our dataset. All reported are the reported accuracies from the
+                validation set. Accross all of our tested classifiers we received a maximum acuracy we got was 65.2% by using a SVM with a 3rd degree polynomial.
+                As for the other learners, Using the neural network we were able to get an acuracy of 24%, originally our neural network was classifying at 15%
+                accuracy. But, we were able to increase the classification acuracy by increasing the depth of the network along with adding dropout into the network.
+                Lastly the decision tree obtained an acuracy of 36.5%   we've tried we've gotten the following final results.
+                The neural network got a maximum
+
+
+            </p>
+
+			<p>
+				<a href="#" class="btnghost"><i class="fa fa-envelope"></i> Request similar project</a>
+				    <i class="small"> or </i>
+				<a href="index.html#portfolio" class="btnghost"><i class="fa fa-camera"></i> Back to projects gallery</a>
+			</p>
+		</div>
+	</div>
+</div>
+</section>
+
+<!-- inject:partials/footer.html -->
+<footer>
+<div class="container text-center">
+    <p class="credits">
+        Copyright &copy; Your Website 2018<br/>
+        <a class="highlightlink" target="_blank" href="https://www.wowthemes.net">"Aries" Template by WowThemes.net</a>
+    </p>
+</div>
+</footer>
+
+<!-- build:js -->
+<script src="assets/js/main.js"></script>
+<!-- endbuild -->
+
+<script src="assets/js/theme.js"></script>
+
+</body>
+
+</html>
+<!-- endinject -->
